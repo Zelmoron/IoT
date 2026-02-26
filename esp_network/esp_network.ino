@@ -1,12 +1,13 @@
+#include "Config.h"
+#include "WiFi.h"
 
-#include "WIFI.h"
-#include "config.h"
-
-void setup(){
-    init_wifi(WIFI_MODE_CLIENT);
+void setup() {
+    Serial.begin(115200);
+    init_WiFi(WIFI_START_MODE_AP);
 }
 
-
-void loop(){
-    //TODO
+void loop() {
+    delay(500);
+    Serial.print("Our ID: ");
+    Serial.println(id());
 }
